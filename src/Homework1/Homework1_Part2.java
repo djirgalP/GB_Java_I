@@ -1,7 +1,6 @@
 package Homework1;
 
-import java.text.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class Homework1_Part2 {
     public static void main(String[] args) {
@@ -13,6 +12,7 @@ public class Homework1_Part2 {
                 System.out.print(i + " ");
             }
         }
+        scanner.close();
     }
 
     public static boolean isSimpleNumberCheck(int number) {

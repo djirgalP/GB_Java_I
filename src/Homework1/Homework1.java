@@ -10,7 +10,7 @@ public class Homework1 {
         int N = scanner.nextInt();
         System.out.println("Triangular number = " + getTriangularNumber(N));
         System.out.println("Factorial = " + getFactorialNumber(N));
-
+        scanner.close();
     }
 
     public static int getTriangularNumber(int number) {
