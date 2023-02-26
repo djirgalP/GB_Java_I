@@ -18,7 +18,7 @@ public class Homework2 {
             len = s.length();
             StringBuilder sb = new StringBuilder("");
             //sb.append(s.charAt(0));
-            System.out.println("s line = " + s);
+            //System.out.println("s line = " + s);
             for (int i = 0; i < len ; i++) {
                 if ((i > 0) && (i < len - 1)) {
                     if ((s.charAt(i) == ' ') && (!(Character.isLowerCase(s.charAt(i + 1)))))
@@ -29,9 +29,9 @@ public class Homework2 {
             sb.append('.');
             result.add(sb.toString());
         }
-/*        for (String s : result) {
+        for (String s : result) {
             System.out.println(s);
-        }*/
+        }
 
 
     }
