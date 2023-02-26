@@ -34,7 +34,7 @@ public class Homework3_Task1 {
         System.out.println("maximum value = " + list.get(list.size() - 1));
         DecimalFormat df2 = new DecimalFormat("###.##");        ;
         System.out.println("average value = " + df2.format(sum/N));
-
+        scanner.close();
 
 
     }
