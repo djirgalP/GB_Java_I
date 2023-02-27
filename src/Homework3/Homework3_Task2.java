@@ -1,9 +1,10 @@
 package Homework3;
 /*Пусть дан произвольный список целых чисел, удалить из него четные числа*/
 
-import java.util.*;
-
-import static jdk.vm.ci.code.CodeUtil.isEven;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Homework3_Task2 {
     public static void main(String[] args) {
@@ -14,16 +15,16 @@ public class Homework3_Task2 {
         Random random = new Random();
         for (int i = 0; i < N; i++) list.add(random.nextInt(0, 100));
         for (int i : list)  System.out.print(i + " ");
-        System.out.println();
-        Iterator iterList = list.iterator();
-        System.out.println(list);
-        while (iterList.hasNext()) {
-            if (isEven((int) iterList.next()))
-                iterList.remove();
+        Iterator iterableList = list.iterator();
+        int chislo;
+        while (iterableList.hasNext()) {
+            chislo = (int)iterableList.next();
+            if (chislo % 2 == 0)
+                iterableList.remove();
         }
-        System.out.println(list);
-        for (int i : list)  System.out.print(i + " ");
         System.out.println();
+        for (int i : list)  System.out.print(i + " ");
+
         scanner.close();
 
 
