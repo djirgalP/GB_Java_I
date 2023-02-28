@@ -3,34 +3,56 @@ package Homework4;
 import java.util.*;
 
 public class Phonebook {
+    HashMap<String, HashSet<String>> book;
 
-    static void deleteNumber(Map<String, Set<Integer>> phonebook) {
-        System.out.println("Please, enter a Name for deleting: ");
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-        phonebook.remove(name);
-        scanner.close();
-    }
-
-    static void findPhoneNumber(Map<String, Set<Integer>> phonebook) {
-        System.out.println("Please, enter a Name for searching a phone number: ");
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-        Set<Integer> value = phonebook.get(name);
-        System.out.println(value);
-        scanner.close();
-    }
-
-    static void addPhoneNumber(Map<String, Set<Integer>> phoneBook) {
+    static void addPhoneNumber() {
         System.out.println("Please, enter a Name: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
         System.out.println("Please, enter a Phone:");
-        int number = scanner.nextInt();
+        String number = scanner.nextLine();
         scanner.close();
-        HashSet<Integer> numbers = new HashSet<>();
+        HashSet<String> numbers = new HashSet<>();
         numbers.add(number);
-        phoneBook.put(name, numbers);
+        book.put(name, numbers);
+    }
+
+    static void deleteNumber(Phonebook book) {
+        System.out.println("Please, enter a Name for deleting: ");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        book.remove(name);
+        scanner.close();
+    }
+
+    static void findPhoneNumber(Phonebook book) {
+        System.out.println("Please, enter a Name for searching a phone number: ");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        Set<String> numbers = book.getName(name);
+        System.out.println(numbers);
+        scanner.close();
+    }
+
+
+
+    static void remove(String name){
+
+    }
+
+    static void put(String name, String numbers){
+        HashSet<String> phones;
+        if (book.get(login) != null) {
+            phones = book.get(login);
+        } else {
+            phones = new HashSet<>();
+        }
+        phones.add(phone);
+        book.put(login, phones);
+    }
+
+    static HashSet getName(String name){
+
     }
 
 

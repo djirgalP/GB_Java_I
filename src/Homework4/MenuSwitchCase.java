@@ -16,7 +16,7 @@ public class MenuSwitchCase {
         System.out.println("4 - Quit");
     }
 
-    public void startMenu() {
+    public void startMenu(Phonebook phonebook) {
         if (this.scanner != null) {
             int key;
             do {
@@ -26,7 +26,7 @@ public class MenuSwitchCase {
                 switch (key) {
                     case 1:
                         System.out.println("Add " + key);
-                        //Phonebook.addPhoneNumber(phonebook);
+                        Phonebook.addPhoneNumber();
                         break;
                     case 2:
                         System.out.println("Delete " + key);
