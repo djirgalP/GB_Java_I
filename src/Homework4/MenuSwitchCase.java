@@ -10,37 +10,36 @@ public class MenuSwitchCase {
     }
 
     private void printMenu() {
-        System.out.println("1 - Add contact number");
-        System.out.println("2 - Delete contact number");
-        System.out.println("3 - Find contact");
+        System.out.println("1 - Add phone number");
+        System.out.println("2 - Delete phone number");
+        System.out.println("3 - Find phone number/-s by login");
         System.out.println("4 - Quit");
     }
 
     public void startMenu(Phonebook phonebook) {
         if (this.scanner != null) {
-            int key;
+            String option;
             do {
                 printMenu();
                 System.out.print("Please, choose one of the operations:\n");
-                key = this.scanner.nextInt();
-                switch (key) {
-                    case 1:
-                        System.out.println("Add " + key);
-                        Phonebook.addPhoneNumber();
+                option = this.scanner.nextLine().toString();
+                switch (option) {
+                    case "1":
+                        phonebook.addPhoneNumber();
                         break;
-                    case 2:
-                        System.out.println("Delete " + key);
+                    case "2":
+                        phonebook.deleteNumber();
                         break;
-                    case 3:
-                        System.out.println("Find " + key);
+                    case "3":
+                        phonebook.findPhoneNumber();
                         break;
-                    case 4:
+                    case "4":
                         System.out.println("Shutting down the program...");
                         break;
                     default:
                         System.out.println("You've entered incorrect menu number...\n");
                 }
-            } while (key != 4);
+            } while (!option.equals("4"));
         }
     }
 }
